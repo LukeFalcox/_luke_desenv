@@ -1,0 +1,88 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Popins" , sans-serif;
+}
+.socialMedia
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.sci
+{
+    position: relative;
+    display: flex;
+}
+.sci li
+{
+list-style: none;
+}
+.sci li::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% calc(-50% + 150px));
+    font-size: 14vw;
+    pointer-events: none;
+    font-weight: 700;
+    transition: 0.5s;
+    opacity: 0;
+}
+.sci li:hover:before
+{
+    opacity: 0.1;
+    transform: translate(-50% calc(-50% + 150px));
+}
+.sci li a
+{
+position: relative;
+display: inline-block;
+width: 120px;
+height: 120px;
+ background: #fff; 
+display: flex;
+justify-content: center;
+align-items: center;
+color: #333;
+border-radius: 10px;
+text-decoration: none;
+margin: 20px;
+font-size: 4em;
+transform-style: preserve-3d ;
+perspective: 500px;
+box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+ transition:background 0.25s; 
+}
+.sci li a:hover.youtube
+{
+    background:#e21212d5 ;
+}
+.sci li a:hover.facebook
+{
+    background:#2b17a0 ;
+}
+.sci li a:hover.instagram
+{
+    
+    background:#ff03c8 ;
+}
+.sci li a:hover.twitch
+{
+    background:#9c09a1 ;
+}
+.sci li a .fa
+{
+   transition: 0.25s;
+   pointer-events: none; 
+}
+.sci li a:hover .fa
+{
+    color: #fff;
+    
+}

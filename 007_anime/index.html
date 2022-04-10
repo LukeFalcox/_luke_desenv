@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="bg"></div>
+        <header>
+            <a href="#" class="logo">Fruits</a>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">O quê há de Novo</a></li>
+                <li><a href="#">Contact-me</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Comida Fresca Todo Dia</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi omnis voluptatibus molestias quae
+                    in temporibus mollitia, provident sapiente perferendis. Corporis beatae magnam doloremque laboriosam
+                    architecto voluptate inventore sit commodi magni? A facere saepe velit? Dolores.</p>
+                <a href="#">Saiba Mais</a>
+            </div>
+            <div class="imgBox">
+                <img src='apple.png' class="Fruits">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li data-text="Maçã" class="active"><img src="apple.png" onclick="imgSlider('apple.png');changeBgColor('#fc4a55')"></li>
+            <li data-text="Manga"><img src="mango.png" onclick="imgSlider('mango.png');changeBgColor('#ffcc02')"></li>
+            <li data-text="Melancia"><img src="watermelon.png" onclick="imgSlider('watermelon.png');changeBgColor('#92ba3c')"></li>
+            <li data-text="Pitaia"><img src="dragonFruits.png" onclick="imgSlider('dragonFruits.png');changeBgColor('#fb6cb2')"></li>
+            <li data-text="Abacaxi"><img src="pineApple.png" onclick="imgSlider('pineApple.png');changeBgColor('#ffb42b')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+    <script>
+        // change image on click 
+        function imgSlider(anything){
+            document.querySelector('.Fruits').src = anything;
+        }
+
+        // change background color
+        function changeBgColor(color){
+            const bg = document.querySelector('.bg');
+            bg.style.background = color;
+        }
+
+        //add active class in selected thambnails
+        let el = document.querySelectorAll('.thumb li');
+        for (let i = 0; i < el.length; i++) {
+            el[i].onclick = function () {
+                var c = 0;
+                // alert(el.length);
+                while (c < el.length) {
+                    el[c++].className = 'check';
+                }
+                el[i].className = 'check active';
+            }
+            //      alert(c);
+        }
+         // alert("finalizou!!");
+
+    </script>
+</body>
+
+</html>

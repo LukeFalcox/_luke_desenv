@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../storage_img/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Manoel Morato</title>
+</head>
+
+<body>
+    <section>
+        <h2>Turma do 9&#186; ano</h2>
+        <div class="banner">
+            <div class="blocks"></div>
+        </div>
+    </section>
+    <!-- ====================[ JAVASCRIPT ]==================== -->
+    <script>
+        const oBanner = document.getElementsByClassName('banner')[0];
+        const oBlocks = document.getElementsByClassName('blocks');
+
+        for (let nI = 0; nI < 400; nI++) {
+            oBanner.innerHTML += '<div class="blocks"></div>';
+            const nDuration = Math.random() * 5;
+            oBlocks[nI].style.animationDuration = nDuration + 's';
+        }
+
+        const oSection = document.querySelector('section');
+        setTimeout(function () {
+            oSection.classList.add('active');
+        }, 14000)   /// ADICIONA CLASS active APÓS 14SEGUNDOS
+
+    </script>
+    <!-- ====================[ ---F-I-M-- ]==================== -->
+</body>
+
+</html>

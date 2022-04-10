@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="../storage_img/favicon-32x32.png" type="image/x-icon">
+   <link rel="stylesheet" href="style.css">
+   <title>Moriarty the Patriot</title>
+</head>
+
+<body>
+
+   <div class="col-1">
+      <p>
+         <img class="imLogo" src="../storage_img/html_css_js.png" alt="">
+      </p>
+
+      <nav class="col-1">Meus Estudos
+         <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./002_anime/index.html" target="_blank">Ícones em Movimento</a></li>
+            <li><a href="./003_anime/index.html" target="_blank">Particulas em Movimento</a></li>
+            <li><a href="./004_anime/index.html" target="_blank">Loading em Movimento</a></li>
+            <li><a href="./005_anime/index.html">2D ate 3D</a></li>
+            <!-- <li><a href="#">Novo</a></li>- -->
+         </ul>
+      </nav>
+   </div>
+
+   <div class="col-2">
+      <header><h2>Meus primeiros estudos com Html5 CSS3 e JavaScript.</h2>
+         <div>
+            <p>Abaixo estão alguns modelos de Html, Css e JavaScript que estou começando a estudar. A finalidade é
+               começar a me familiarizar com comandos, estruturas, IDE de desenvolvimento entre outros detalhes desse
+               universo.</p>
+         </div>
+      </header>
+
+      <main class="content" id="conteudo">
+         <section> 
+
+            <article>
+               <header>
+                  
+                  <h2> HTML:icones em movimentação</h2> 
+                  <p><h3>Neste modelo utilizo ícones para deixar o fundo da tela com um visual dinâmico, <br> além de fazer
+                     com que ao passar o mouse sobre os ícones eles recebam um destaque usando CSS.</h3>
+                  </p>
+                  por - <span class="author">Luke</span> - <a href="./002_anime/index.html" target="_blank">Ícones em
+                     Movimento</a>
+               </header>
+            </article>
+
+            <article>
+               <header>
+                  <h2>HTML:Particulas em Movimento</h2>
+                  <p><h3>Neste HTML utilizo Css para fazer a coloração das particulas e a movimentação com isso a particulas giram em torno de 360 graus.</h3>
+                  </p>
+                  por - <span class="author">Luke</span> - <a href="./003_anime/index.html" target="_blank">:Particulas em Movimento</a>
+               </header>
+            </article>
+
+            <article>
+               <header>
+                  <h2>Loading Infinito</h2>
+                  <p><h3>Neste HTML utilizo Css para fazer a coloração das Loading e a movimentação mas para isso é necessario criar certas bolinhas para elas girarem em 180 graus.</h3>
+                  </p>
+                  por - <span class="author">Autor</span> - <a href="./004_anime/index.html" target="_blank">Loading Infinito</a>
+               </header>
+            </article>
+            <article>
+               <header>
+                  <h2>2D ate 3D</h2>
+                  <p><h3>Neste HTML utilizo Css para fazer a transição da imagem em 215 graus.</h3>
+                  </p>
+                  por - <span class="author">Autor</span> - <a href="./005_anime/index.html" target="_blank">2D ate 3D</a>
+               </header>
+            </article>
+         </section>
+      </main>
+
+      <footer>
+         <div>
+            <p>
+            <h4>Este site é oq aprendo sobre HTML aprendo!</h4>
+            </p>
+         </div>
+      </footer>
+
+   </div>
+
+   <script>
+      function carregar(pagina) {
+         let cUrl = document.URL;
+         alert(location.href);
+         document.getElementById("conteudo").innerHTML = cUrl.substring(0, cUrl.indexOf("/index.html#")) + pagina + "/index.html";
+      }
+   </script>
+
+</body>
+
+</html>
