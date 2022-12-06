@@ -1,0 +1,7 @@
+n = input('Digite algo')
+print(n.isalpha()," para alfabetico")
+print(n.isnumeric()," para numerico")
+print(n.isupper()," para maisculo")
+print(n.islower(),"para minusculo")
+print(n.isalnum(),"para aplphanumerico (Letra e numero juntos)")
+print(type(n),"para string")
